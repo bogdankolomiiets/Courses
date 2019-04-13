@@ -2,7 +2,7 @@ package com.bogdan.kolomiiets.tasks;
 
 import java.util.Scanner;
 
-public class Task_1_Letter {
+public class Task_01_Letter {
     public static void main(String[] args) {
         solution_One();
     }

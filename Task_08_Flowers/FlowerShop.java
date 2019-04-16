@@ -1,8 +1,6 @@
 package com.bogdan.kolomiiets.tasks.Task_08_Flowers;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class FlowerShop {
     private List<Flower> flowers = new ArrayList<>();
@@ -12,39 +10,57 @@ public class FlowerShop {
     }
 
     private void addFlowers(){
-        flowers.add(new Flower(FlowersName.ROSE, 40, 500));
-        flowers.add(new Flower(FlowersName.CARNATION, 30, 100));
-        flowers.add(new Flower(FlowersName.CHAMOMILE, 10, 300));
+        flowers.add(new Flower(FlowersName.ROSE, 30, 500));
+        flowers.add(new Flower(FlowersName.CARNATION, 25, 100));
+        flowers.add(new Flower(FlowersName.CHAMOMILE, 5, 300));
         flowers.add(new Flower(FlowersName.HYACINTH, 20, 30));
-        flowers.add(new Flower(FlowersName.TULIP, 15, 500));
+        flowers.add(new Flower(FlowersName.TULIP, 10, 500));
+
+        //sort array by max price
+        flowers.sort(new CompareFlower());
     }
 
 
-    public void makeBouquet (int price){
+    protected void makeBouquet (int moneyCount) {
         //Find out min price
-        int minPrice = flowers.get(0).getPriceForPiece();
-        for (Flower f : flowers){
-            int iteratorPrice = f.getPriceForPiece();
-            if (iteratorPrice < minPrice){
-                minPrice = iteratorPrice;
-            }
-        }
-
+        int minPrice = getMinPrice();
         //try make bouquets
         Bouquet bouquet = new Bouquet();
-        while (price >= minPrice) {
-            Flower flower = flowers.get((int) (Math.random() * flowers.size()));
-            if (flower.getPriceForPiece() <= price) {
-                bouquet.addFlowerToList(flower);
-                price -= flower.getPriceForPiece();
-                bouquet.setFlowerCount(bouquet.getFlowerCount() + 1);
+
+        again: while (moneyCount >= minPrice) {
+           for (Flower f : flowers) {
+                if (moneyCount >= f.getPriceForPiece()) {
+                    bouquet.addFlowerIntoBouquet(f);
+                    f.setCount(f.getCount() - 1);
+                    moneyCount -= f.getPriceForPiece();
+                    bouquet.setFlowerCount(bouquet.getFlowerCount() + 1);
+
+                }
+
+            }
+           if (moneyCount >= minPrice) continue again;
+
+            /*check flowers count into bouquet
+             * if flower was removed from bouquet
+             * increase moneyCount on the price of removed flower*/
+            Flower removedFlower = checkFlowersCount(bouquet);
+            if (removedFlower != (null) && removedFlower.getPriceForPiece() > minPrice) {
+                moneyCount += removedFlower.getPriceForPiece();
+                flowers.remove(removedFlower);
             }
         }
-        //check count
-        if (bouquet.getFlowerCount() % 2 == 0){
-            bouquet.removeFlower();
-        }
         System.out.println(bouquet);
+    }
+
+    private int getMinPrice(){
+        return flowers.get(flowers.size() - 1).getPriceForPiece();
+    }
+
+    private Flower checkFlowersCount(Bouquet bouquet){
+        if (bouquet.getFlowerCount() % 2 == 0){
+            Flower removedFlower = bouquet.removeFlower();
+            return removedFlower;
+        } else return null;
     }
 }
 

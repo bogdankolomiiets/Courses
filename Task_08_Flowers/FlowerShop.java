@@ -3,7 +3,7 @@ package com.bogdan.kolomiiets.tasks.Task_08_Flowers;
 import java.util.*;
 
 public class FlowerShop {
-    private List<Flower> flowers = new ArrayList<>();
+    private ArrayList<Flower> flowers = new ArrayList<>();
 
     public FlowerShop() {
         addFlowers();
@@ -22,34 +22,51 @@ public class FlowerShop {
 
 
     protected void makeBouquet (int moneyCount) {
+        //make copy of flowers array
+        List<Flower> tempList = (ArrayList<Flower>) flowers.clone();
         //Find out min price
         int minPrice = getMinPrice();
-        //try make bouquets
-        Bouquet bouquet = new Bouquet();
 
-        again: while (moneyCount >= minPrice) {
-           for (Flower f : flowers) {
-                if (moneyCount >= f.getPriceForPiece()) {
-                    bouquet.addFlowerIntoBouquet(f);
-                    f.setCount(f.getCount() - 1);
-                    moneyCount -= f.getPriceForPiece();
-                    bouquet.setFlowerCount(bouquet.getFlowerCount() + 1);
+        int tempMoneyCount;
+        //reserved bouquet variable
+        Bouquet bouquet;
+
+        //try make bouquets
+        //it's loop for different variant of bouquets
+        while (tempList.size() > 2) {
+            bouquet = new Bouquet();
+            tempMoneyCount = moneyCount;
+
+            again:
+            //it's loop while we have money
+            while (tempMoneyCount >= minPrice) {
+                for (Flower f : tempList) {
+                    if (tempMoneyCount >= f.getPriceForPiece()) {
+                        bouquet.addFlowerIntoBouquet(f);
+                        f.setCount(f.getCount() - 1);
+                        tempMoneyCount -= f.getPriceForPiece();
+                        bouquet.setFlowerCount(bouquet.getFlowerCount() + 1);
+
+                    }
 
                 }
+                /*if we have bought a flower with a minimum price
+                and we have a money for the same flower, then we buy it again.
+                After we check the flowers count*/
+                if (tempMoneyCount >= minPrice) continue again;
 
+                /*check flowers count into bouquet
+                 * if flower was removed from bouquet
+                 * increase moneyCount on the price of removed flower*/
+                Flower removedFlower = checkFlowersCount(bouquet);
+                if (removedFlower != (null) && removedFlower.getPriceForPiece() > minPrice) {
+                    tempMoneyCount += removedFlower.getPriceForPiece();
+                    tempList.remove(removedFlower);
+                }
             }
-           if (moneyCount >= minPrice) continue again;
-
-            /*check flowers count into bouquet
-             * if flower was removed from bouquet
-             * increase moneyCount on the price of removed flower*/
-            Flower removedFlower = checkFlowersCount(bouquet);
-            if (removedFlower != (null) && removedFlower.getPriceForPiece() > minPrice) {
-                moneyCount += removedFlower.getPriceForPiece();
-                flowers.remove(removedFlower);
-            }
+            System.out.println(bouquet);
+            tempList.remove(0);
         }
-        System.out.println(bouquet);
     }
 
     private int getMinPrice(){

@@ -32,7 +32,7 @@ public class Bouquet {
             //remove flower with minimal price
             this.flowerBouquet.remove(flowerToRemove);
             flowerCount--;
-            System.out.println("REMOVED " + flowerToRemove);
+            //System.out.println("REMOVED " + flowerToRemove);
         } else System.out.println("Nothing to remove");
         return flowerToRemove;
     }

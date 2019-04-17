@@ -15,8 +15,9 @@ public class GameStart {
 
         initUser();
         //init another gamers
-        initAnotherUsers();
-        System.out.println(gamers);
+        initAnotherGamers();
+        //choose a banker
+        setRandBanker();
     }
 
     private void initUser(){
@@ -25,9 +26,13 @@ public class GameStart {
         gamersCount--;
     }
 
-    private void initAnotherUsers(){
-        for (int i = gamersCount; i > 0; i--){
-            gamers.add(new Computer(i));
+    private void initAnotherGamers(){
+        for (int i = 0; i < gamersCount; i++){
+            gamers.add(new Computer(i+1));
         }
+    }
+
+    private void setRandBanker(){
+        gamers.get((int) (Math.random() * gamers.size())).setBanker(true);
     }
 }

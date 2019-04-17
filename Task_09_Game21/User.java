@@ -1,13 +1,23 @@
 package com.bogdan.kolomiiets.tasks.Task_09_Game21;
 
 public class User implements Gamers {
-    private boolean isBanker;
+    private boolean banker;
+    private int moneyCount;
 
+    @Override
     public boolean isBanker() {
-        return isBanker;
+        return banker;
     }
 
+    @Override
     public void setBanker(boolean banker) {
-        isBanker = banker;
+        this.banker = banker;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "banker=" + banker +
+                '}';
     }
 }

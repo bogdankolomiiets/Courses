@@ -18,12 +18,15 @@ public class CardDeck {
         }
     }
 
+<<<<<<< HEAD
     public PlayingCards getCard(){
         PlayingCards card = playingCardDeck.get(0);
         playingCardDeck.remove(0);
         return card;
     }
 
+=======
+>>>>>>> 2e3fe7bc6940b330e17c11dcf05b13f088c1be90
     //mixed a deck specified number of times
     public void mixDeck(int times) {
         List<PlayingCards> tempCardsList;

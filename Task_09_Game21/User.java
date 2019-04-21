@@ -6,6 +6,7 @@ import java.util.List;
 public class User implements Gamers {
     private boolean banker;
     private int moneyCount;
+    private int score;
     private List<PlayingCards> playingCards = new ArrayList<>();
 
     @Override
@@ -19,14 +20,39 @@ public class User implements Gamers {
     }
 
     @Override
-    public void getOneCard(PlayingCards card) {
+    public void addCard(PlayingCards card) {
         playingCards.add(card);
-        System.out.println("You have got card: " + card);
+        System.out.println("\nYou have got card: " + card);
     }
 
     @Override
-    public int getGamerNo() {
-        return 1;
+    public List<PlayingCards> getPlayingCards() {
+        return playingCards;
+    }
+
+    @Override
+    public void setMoneyCount(int moneyCount) {
+        this.moneyCount = moneyCount;
+    }
+
+    @Override
+    public void setScore(int score) {
+        this.score += score;
+    }
+
+    @Override
+    public void resetScore() {
+        score = 0;
+    }
+
+    @Override
+    public int getScore() {
+        return score;
+    }
+
+    @Override
+    public int getMoneyCount() {
+        return moneyCount;
     }
 
     @Override

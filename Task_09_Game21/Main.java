@@ -25,6 +25,7 @@ public class Main {
         }
         while (gamersCount < 2 || gamersCount > 4);
         System.out.println("Count of gamers = " + gamersCount);
+        System.out.println("GAME STARTED!!!\n");
         GameStart game = new GameStart(deck, gamersCount);
     }
 }

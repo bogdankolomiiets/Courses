@@ -5,13 +5,9 @@ import java.util.List;
 
 public class Computer implements Gamers {
     private boolean banker;
-
-    public int getGamerNo() {
-        return gamerNo;
-    }
-
     private int gamerNo;
     private int moneyCount;
+    private int score;
     private List<PlayingCards> playingCards = new ArrayList<>();
 
     public Computer(int gamerNo) {
@@ -28,8 +24,39 @@ public class Computer implements Gamers {
         this.banker = banker;
     }
 
-    public void getOneCard(PlayingCards card) {
+    @Override
+    public void addCard(PlayingCards card) {
         playingCards.add(card);
+    }
+
+    @Override
+    public List<PlayingCards> getPlayingCards() {
+        return playingCards;
+    }
+
+    @Override
+    public void setMoneyCount(int moneyCount) {
+        this.moneyCount = moneyCount;
+    }
+
+    @Override
+    public int getMoneyCount() {
+        return moneyCount;
+    }
+
+    @Override
+    public void setScore(int score) {
+        this.score += score;
+    }
+
+    @Override
+    public void resetScore() {
+        score = 0;
+    }
+
+    @Override
+    public int getScore() {
+        return score;
     }
 
     @Override

@@ -1,6 +1,7 @@
 package com.bogdan.kolomiiets.tasks.Task_09_Game21;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class GameStart {
@@ -13,49 +14,40 @@ public class GameStart {
         this.deck = deck;
         this.gamersCount = gamersCount;
 
-        initUser();
-        //init another gamers
-        initAnotherGamers();
+        initGamers();
+
         //choose a banker
         setRandBanker();
-<<<<<<< HEAD
-        //set one card for all gamers
-        setOneCard();
-=======
->>>>>>> 2e3fe7bc6940b330e17c11dcf05b13f088c1be90
+
+        //get one card for all gamers
+        getOneCard();
     }
 
-    private void initUser(){
+    private void initGamers(){
         User user = new User();
         gamers.add(user);
         gamersCount--;
+        //init another gamers
+        initAnotherGamers();
     }
 
     private void initAnotherGamers(){
         for (int i = 0; i < gamersCount; i++){
-<<<<<<< HEAD
             gamers.add(new Computer(i+2));
-=======
-            gamers.add(new Computer(i+1));
->>>>>>> 2e3fe7bc6940b330e17c11dcf05b13f088c1be90
         }
     }
 
     private void setRandBanker(){
-<<<<<<< HEAD
         int random = (int) (Math.random() * gamers.size());
         gamers.get(random).setBanker(true);
         System.out.println("Banker are: " + gamers.get(random));
         //set banker to 0 index in array
-
+        Collections.sort(gamers, new CompareGamers());
     }
 
-    private void setOneCard(){
+    private void getOneCard(){
         for (Gamers g : gamers){
-            g.setOneCard(deck.getCard());
+            g.getOneCard(deck.getCard());
         }
-=======
-        gamers.get((int) (Math.random() * gamers.size())).setBanker(true);
->>>>>>> 2e3fe7bc6940b330e17c11dcf05b13f088c1be90
     }
 }

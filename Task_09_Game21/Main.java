@@ -12,8 +12,9 @@ public class Main {
         //create cards deck and mix them
         CardDeck deck = new CardDeck();
         deck.mixDeck(50);
-        System.out.println("Please enter games count...from 2 to 4");
 
+        //init gamers count
+        System.out.println("Please enter games count...from 2 to 4");
         int gamersCount = 0;
         do {
             try {

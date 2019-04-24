@@ -1,38 +1,37 @@
 package com.bogdan.kolomiiets.tasks.Task_07_WineCatalog;
 
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
-import java.util.SimpleTimeZone;
 
 public class Wine {
-    private String wineName;
+    private WineName wineName;
     private String originCountry;
-    private Date bottlingDate;
+    private Calendar bottlingDate;
 
-    public Wine(String wineName, String originCountry, Date bottlingDate) {
+    public Wine(WineName wineName, String originCountry, Calendar bottlingDate) {
         this.wineName = wineName;
         this.originCountry = originCountry;
         this.bottlingDate = bottlingDate;
     }
 
-    public String getWineName() {
+    public WineName getWineName() {
         return wineName;
     }
 
-    public Date getBottlingDate() {
+    public Calendar getBottlingDate() {
         return bottlingDate;
     }
 
     public int getExpire(){
-        return WineName.valueOf(this.getWineName()).expire + this.getBottlingDate().getYear();
+        return this.getWineName().expire + bottlingDate.get(Calendar.YEAR);
     }
 
     @Override
     public String toString() {
-        return "wineName='" + wineName + '\'' +
-                ", originCountry='" + originCountry + '\'' +
-                ", bottlingDate=" + bottlingDate +
+        return "wineName = '" + wineName + '\'' +
+                ", originCountry = '" + originCountry + '\'' +
+                ", bottlingDate = " + bottlingDate.get(Calendar.YEAR)  + "/"
+                                    + bottlingDate.get(Calendar.MONTH) + "/"
+                                    + bottlingDate.get(Calendar.DAY_OF_MONTH) +
                 " expire year: " + getExpire();
     }
 }

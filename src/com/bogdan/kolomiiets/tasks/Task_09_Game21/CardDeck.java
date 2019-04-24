@@ -26,7 +26,10 @@ public class CardDeck {
     }
 
     //mixed a deck specified number of times
-    public void mixDeck(int times) {
+    protected void mixDeck(int times) {
+        //check times value
+        times = times > 0 ? times : 50;
+
         List<PlayingCards> tempCardsList;
         List<PlayingCards> subList;
         while (times > 0) {
@@ -53,8 +56,13 @@ public class CardDeck {
         }
     }
 
-    private int getRandomIntInRangeInclusive(int min, int max) {
+    protected int getRandomIntInRangeInclusive(int min, int max) {
         //return random number in range between min and max inclusive
-        return (int) (Math.random() * (max - min + 1) + min);
+        if (min <= max) {
+            return (int) (Math.random() * (max - min + 1) + min);
+        } else {
+            System.out.println("max value too low!!!");
+            throw new IllegalArgumentException();
+        }
     }
 }

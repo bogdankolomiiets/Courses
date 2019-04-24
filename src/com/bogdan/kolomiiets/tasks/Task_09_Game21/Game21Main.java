@@ -3,12 +3,13 @@ package com.bogdan.kolomiiets.tasks.Task_09_Game21;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Main {
+public class Game21Main {
     public static void main(String[] args) {
-        gameInitialise();
+        Game21Main game21 = new Game21Main();
+        game21.gameInitialise();
     }
 
-    protected static void gameInitialise() {
+    protected void gameInitialise() {
         //create cards deck and mix them
         CardDeck deck = new CardDeck();
         deck.mixDeck(50);

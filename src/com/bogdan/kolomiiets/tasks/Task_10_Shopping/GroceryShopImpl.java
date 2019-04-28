@@ -7,12 +7,12 @@ public class GroceryShopImpl implements Shops {
     private List<Product> groceryProductsList = new ArrayList<>();
 
     @Override
-    public List<Product> getGoodsList() {
+    public List<Product> getProductList() {
         return groceryProductsList;
     }
 
     @Override
-    public void addGoods(Product product) {
+    public void addProduct(Product product) {
         if (product != null) {
             groceryProductsList.add(product);
         } else throw new NullPointerException();

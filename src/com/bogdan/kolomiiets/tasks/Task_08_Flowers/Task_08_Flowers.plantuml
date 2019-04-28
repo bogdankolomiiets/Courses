@@ -45,12 +45,12 @@ title __TASK_08_FLOWERS's Class Diagram__\n
   package com.bogdan.kolomiiets.tasks {
     package com.bogdan.kolomiiets.tasks.Task_08_Flowers {
       class FlowerShop {
-          - flowers : ArrayList<Flower>
+          # flowers : ArrayList<Flower>
           + FlowerShop()
-          - addFlowers()
+          # addFlowers()
           # makeBouquet()
-          - getMinPrice()
-          - checkFlowersCount()
+          # getMinPrice()
+          # checkFlowersCount()
       }
     }
   }

@@ -6,7 +6,9 @@ public class Product {
 
     public Product(ProductsName name, double price) {
         this.name = name;
-        this.price = price;
+        if (price > 0){
+            this.price = price;
+        } else throw new IllegalArgumentException("Price less then 0");
     }
 
     public ProductsName getName() {

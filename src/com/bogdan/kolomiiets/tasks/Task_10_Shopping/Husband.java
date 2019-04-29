@@ -19,16 +19,19 @@ public class Husband {
     }
 
     protected Map<ProductsName, Double> getAvailableProductsList(){
+        //creating temporary HashMap
         Map<ProductsName, Double> tempSet = new HashMap<>();
-        for (ProductsName name : productsListFromWife){
-            if (allProductsList.containsKey(name)){
-                tempSet.put(name, allProductsList.get(name));
+
+        for (ProductsName productsName : productsListFromWife){
+            if (allProductsList.containsKey(productsName)){
+                tempSet.put(productsName, allProductsList.get(productsName));
             }
         }
         return tempSet;
     }
 
-    private void findOutAllProductsList(){
+    //method creates all product list
+    public void findOutAllProductsList(){
         for (Shops s : Shops.shops){
             for (Product p : s.getProductList())
             allProductsList.put(p.getName(), p.getPrice());

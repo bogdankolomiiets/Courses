@@ -4,7 +4,7 @@ import java.util.*;
 
 public class CountOfMatchAndSorting {
 
-    public Map<String, Integer> findOutMatchesCount(List<String> textCollection, String[] listOfWords) {
+    public static Map<String, Integer> findOutMatchesCount(List<String> textCollection, String[] listOfWords) {
         if(textCollection != null && listOfWords != null) {
             //creating Map<String, Integer> with list of words
             Map<String, Integer> mapOfWords = new HashMap<>();
@@ -24,7 +24,7 @@ public class CountOfMatchAndSorting {
         } else throw new NullPointerException();
     }
 
-    public Map<String, Integer> sortMatchesCount(Map<String, Integer> mapOfWords) {
+    public static Map<String, Integer> sortMatchesCount(Map<String, Integer> mapOfWords) {
         if (mapOfWords != null) {
             List<Map.Entry<String, Integer>> tempList = new LinkedList(mapOfWords.entrySet());
             Collections.sort(tempList, (o1, o2) -> o2.getValue().compareTo(o1.getValue()));

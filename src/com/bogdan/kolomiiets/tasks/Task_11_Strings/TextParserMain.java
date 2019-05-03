@@ -25,17 +25,26 @@ public class TextParserMain {
     }
 
     public void makeAllChecking(){
-        CountOfMatchAndSorting matchAndSort = new CountOfMatchAndSorting();
-        mapOfWords = matchAndSort.findOutMatchesCount(textCollection, listOfWords);
-        System.out.println(mapOfWords);
+        System.out.println("Initial list...");
+        System.out.println(mapOfWords = CountOfMatchAndSorting.findOutMatchesCount(textCollection, listOfWords));
+
         //sort mapOfWords by count of matches - desc
-        mapOfWords = matchAndSort.sortMatchesCount(mapOfWords);
         //display mapOfWords after sorting
-        System.out.println(mapOfWords);
-        //find out palindrome which has max length in text
-        getMaxLengthPalindrome(textCollection);
+        System.out.println("\nList after sorting...");
+        System.out.println(mapOfWords = CountOfMatchAndSorting.sortMatchesCount(mapOfWords));
+
+        //sorting text by count of chars specified - desc
         DescCharacterSort descCharacterSort = new DescCharacterSort();
-        descCharacterSort.sortListByDescCharacter('t', textCollection);
+        System.out.println("\nText sorted by the count of chars specified - descending...");
+        System.out.println(textCollection = descCharacterSort.sortListByDescCharacter('t', textCollection));
+
+        //find out palindrome which has max length
+        System.out.println("\nFind out palindrome which has max length...");
+        getMaxLengthPalindrome(textCollection);
+
+        //find out and change specific length words
+        System.out.println("\nFind out and change specific length words...");
+        System.out.println(textCollection = ReplaceWords.replaceSpecificLengthWords(4, "LLL", textCollection));
     }
 
     private void initListOfWords(String[] listOfWords) {

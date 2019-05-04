@@ -9,9 +9,13 @@ public class ReplaceWords {
             throw new IllegalArgumentException("Word length less than 1");
         } else if (replacementWord != null && textCollection != null) {
             List<String> tempList = new ArrayList<>(textCollection);
-            for (int i = 0; i < tempList.size(); i++) {
-                if (tempList.get(i).length() == wordLength) {
-                    tempList.set(i, replacementWord);
+            for (int i = textCollection.size() - 1; i > 0; i--) {
+                if (textCollection.get(i).length() == wordLength) {
+                    if (replacementWord.equals("")) {
+                        tempList.remove(i);
+                    } else {
+                        tempList.set(i, replacementWord);
+                    }
                 }
             }
             return tempList;

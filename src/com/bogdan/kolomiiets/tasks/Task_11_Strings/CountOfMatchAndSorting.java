@@ -5,22 +5,26 @@ import java.util.*;
 public class CountOfMatchAndSorting {
 
     public static Map<String, Integer> findOutMatchesCount(List<String> textCollection, String[] listOfWords) {
-        if(textCollection != null && listOfWords != null) {
-            //creating Map<String, Integer> with list of words
-            Map<String, Integer> mapOfWords = new HashMap<>();
-            for (String s : listOfWords) {
-                mapOfWords.put(s, 0);
-            }
+        if (textCollection != null && listOfWords != null) {
+            if (listOfWords.length == 0) {
+                throw new RuntimeException("Please specify words for counting match");
+            } else {
+                //creating Map<String, Integer> with list of words
+                Map<String, Integer> mapOfWords = new HashMap<>();
+                for (String s : listOfWords) {
+                    mapOfWords.put(s, 0);
+                }
 
-            //counting matching of words
-            for (Map.Entry<String, Integer> entry : mapOfWords.entrySet()) {
-                for (int i = 0; i < textCollection.size(); i++) {
-                    if (entry.getKey().equalsIgnoreCase(textCollection.get(i))) {
-                        mapOfWords.put(entry.getKey(), entry.getValue() + 1);
+                //counting matching of words
+                for (Map.Entry<String, Integer> entry : mapOfWords.entrySet()) {
+                    for (int i = 0; i < textCollection.size(); i++) {
+                        if (entry.getKey().equalsIgnoreCase(textCollection.get(i))) {
+                            mapOfWords.put(entry.getKey(), entry.getValue() + 1);
+                        }
                     }
                 }
+                return mapOfWords;
             }
-            return mapOfWords;
         } else throw new NullPointerException();
     }
 

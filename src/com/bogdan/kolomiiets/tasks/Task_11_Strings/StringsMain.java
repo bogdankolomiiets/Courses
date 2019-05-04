@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class TextParserMain {
+public class StringsMain {
     private String[] listOfWords;
     private List<String> textCollection = new ArrayList<>();
     private Map<String, Integer> mapOfWords;
@@ -14,11 +14,11 @@ public class TextParserMain {
     private FileReader fileReader;
 
     public static void main(String[] args) {
-        TextParserMain textParser = new TextParserMain();
-        textParser.makeAllChecking();
+        StringsMain stringsMain = new StringsMain();
+        stringsMain.makeAllChecking();
     }
 
-    public TextParserMain() {
+    public StringsMain() {
         String[] words = {"to", "do", "I", "no", "not", "the"};
         initListOfWords(words);
         setTextCollection(textFile);
@@ -34,17 +34,16 @@ public class TextParserMain {
         System.out.println(mapOfWords = CountOfMatchAndSorting.sortMatchesCount(mapOfWords));
 
         //sorting text by count of chars specified - desc
-        DescCharacterSort descCharacterSort = new DescCharacterSort();
         System.out.println("\nText sorted by the count of chars specified - descending...");
-        System.out.println(textCollection = descCharacterSort.sortListByDescCharacter('t', textCollection));
+        System.out.println(textCollection = DescCharacterSort.sortListByDescCharacter('T', textCollection));
 
         //find out palindrome which has max length
         System.out.println("\nFind out palindrome which has max length...");
-        getMaxLengthPalindrome(textCollection);
+        System.out.println(FindPalindrome.getMaxLengthPalindrome(textCollection));
 
         //find out and change specific length words
         System.out.println("\nFind out and change specific length words...");
-        System.out.println(textCollection = ReplaceWords.replaceSpecificLengthWords(4, "LLL", textCollection));
+        System.out.println(textCollection = ReplaceWords.replaceSpecificLengthWords(3, "NEW", textCollection));
     }
 
     private void initListOfWords(String[] listOfWords) {
@@ -75,18 +74,6 @@ public class TextParserMain {
                     e.printStackTrace();
                 }
             }
-        } else throw new NullPointerException();
-    }
-
-    public void getMaxLengthPalindrome(List<String> textCollection) {
-        if (textCollection != null) {
-            String palindrome = "";
-            for (String s : textCollection){
-                if (s.equalsIgnoreCase(new StringBuffer(s).reverse().toString())){
-                    palindrome = s.length() > palindrome.length() ? s : palindrome;
-                }
-            }
-            System.out.println(palindrome.length() > 0 ? "MAX length palindrome is: " + palindrome : "This text has no palindrome");
         } else throw new NullPointerException();
     }
 }

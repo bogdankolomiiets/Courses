@@ -26,7 +26,7 @@ public class DescCharacterSortTest extends Assert {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void IllegalArgumentTest(){
+    public void illegalArgumentTest(){
         DescCharacterSort.sortListByDescCharacter('*', textCollection);
     }
 

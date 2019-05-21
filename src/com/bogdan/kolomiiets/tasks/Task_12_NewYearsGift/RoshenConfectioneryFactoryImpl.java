@@ -4,18 +4,25 @@ import org.apache.log4j.Logger;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.function.Consumer;
+
+import static com.bogdan.kolomiiets.tasks.Task_12_NewYearsGift.ConfectioneryCatalog.*;
 
 public class RoshenConfectioneryFactoryImpl implements ConfectioneryFactory {
+    private static Logger LOGER = Logger.getLogger(RoshenConfectioneryFactoryImpl.class);
     private Map<Confectionery, Integer> confectionery = new HashMap<>();
-    public Logger logger = Logger.getLogger(this.getClass());
 
     @Override
-    public void makeConfectionery(Confectionery confectionery, Integer kilo) {
-        if (confectionery != null && kilo > 0) {
-            this.confectionery.put(confectionery, kilo);
-        } else {
-            logger.warn(this.getClass().getSimpleName() + " can't made confectionery. Cause: parameter confectionery equals " + confectionery + " kilo = " + kilo);
-        }
+    public void makeConfectionery() {
+        confectionery.put(new Candy(CRAZY_BEE), 5000);
+        confectionery.put(new Candy(KORIVKA), 4500);
+        confectionery.put(new Candy(MILKY_SPLASH), 1500);
+        confectionery.put(new Candy(MINKY_BINKY), 3000);
+        confectionery.put(new Candy(SLYVKY_LENYVKY), 2000);
+        confectionery.put(new Wafer(ROSHETTO_DARK), 3000);
+        confectionery.put(new Wafer(ROSHETTO_MILK), 3000);
+
+        LOGER.debug(this.getClass().getSimpleName() + " made confectionery.");
     }
 
     @Override
@@ -23,4 +30,8 @@ public class RoshenConfectioneryFactoryImpl implements ConfectioneryFactory {
         return confectionery;
     }
 
+    @Override
+    public String toString() {
+        return confectionery.toString();
+    }
 }

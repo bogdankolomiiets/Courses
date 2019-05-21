@@ -1,19 +1,25 @@
 package com.bogdan.kolomiiets.tasks.Task_12_NewYearsGift;
 
 public class Candy implements Candies {
-    private final CandiesName candyName;
-    private final int candyWeight;
+    private final String candyName;
+    private final double candyWeightGramme;
 
-    public Candy(CandiesName candyName, int candyWeight) {
-        this.candyName = candyName;
-        this.candyWeight = candyWeight;
+    public Candy(ConfectioneryCatalog candy) {
+        this.candyName = candy.name();
+        this.candyWeightGramme = candy.getWeight();
     }
 
     public String getCandyName() {
-        return candyName.name();
+        return candyName;
     }
 
-    public int getCandyWeight() {
-        return candyWeight;
+    @Override
+    public String toString() {
+        return candyName + ": " + candyWeightGramme;
+    }
+
+    @Override
+    public double getWeight() {
+        return candyWeightGramme;
     }
 }

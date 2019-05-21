@@ -1,4 +1,8 @@
 package com.bogdan.kolomiiets.tasks.Task_12_NewYearsGift;
 
-public interface Confectionery {
+import java.io.Serializable;
+
+@FunctionalInterface
+public interface Confectionery extends Serializable {
+    double getWeight();
 }

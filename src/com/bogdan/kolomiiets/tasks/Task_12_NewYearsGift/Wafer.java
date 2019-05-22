@@ -9,17 +9,18 @@ public class Wafer implements Wafers {
         this.waferWeightGramme = wafer.getWeight();
     }
 
-    public String getWaferName() {
-        return waferName;
-    }
-
     @Override
-    public String toString() {
-        return waferName + ": " + waferWeightGramme;
+    public String getName() {
+        return waferName;
     }
 
     @Override
     public double getWeight() {
         return waferWeightGramme;
+    }
+
+    @Override
+    public String toString() {
+        return waferName + ": " + waferWeightGramme + " grams";
     }
 }

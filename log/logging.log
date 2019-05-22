@@ -1,33 +1,10 @@
-2019-05-21 13:29:55 INFO  StackTraceElement:17 - confectionery added to NewYearsGift
-2019-05-21 13:39:27 WARN  StackTraceElement:20 - Confectionery factory didn't made a product
-2019-05-21 13:40:05 WARN  StackTraceElement:20 - Confectionery factory didn't made a product
-2019-05-21 13:40:42 WARN  StackTraceElement:20 - Confectionery factory didn't made a product
-2019-05-21 13:41:08 WARN  StackTraceElement:20 - Confectionery factory didn't made a product
-2019-05-21 13:42:25 WARN  StackTraceElement:20 - factory class com.bogdan.kolomiiets.tasks.Task_12_NewYearsGift.NewYearsGift didn't made a product
-2019-05-21 13:42:47 WARN  StackTraceElement:20 - Factory com.bogdan.kolomiiets.tasks.Task_12_NewYearsGift.NewYearsGift@27973e9b didn't made a product
-2019-05-21 13:43:07 WARN  StackTraceElement:20 - Factory NewYearsGift didn't made a product
-2019-05-21 13:43:39 WARN  StackTraceElement:20 - Factory HashMap didn't made a product
-2019-05-21 13:48:19 WARN  StackTraceElement:20 - Confectionery factory didn't made a product. confectionery.size() = 0
-2019-05-21 13:49:05 DEBUG StackTraceElement:21 - RoshenConfectioneryFactoryImpl made confectionery
-2019-05-21 13:49:05 INFO  StackTraceElement:17 - NewYearsGift created successful
-2019-05-21 14:26:51 DEBUG StackTraceElement:21 - RoshenConfectioneryFactoryImpl made confectionery
-2019-05-21 14:26:51 INFO  StackTraceElement:18 - NewYearsGift created successful
-2019-05-21 14:27:30 DEBUG StackTraceElement[]:21 - RoshenConfectioneryFactoryImpl made confectionery
-2019-05-21 14:27:30 INFO  StackTraceElement[]:18 - NewYearsGift created successful
-2019-05-21 14:31:29 DEBUG Main:21 - RoshenConfectioneryFactoryImpl made confectionery
-2019-05-21 14:31:29 INFO  Main:18 - NewYearsGift created successful
-2019-05-21 14:32:38 DEBUG Main:21 - RoshenConfectioneryFactoryImpl made confectionery
-2019-05-21 14:32:38 INFO  Main:18 - NewYearsGift created successful
-2019-05-21 14:46:32 DEBUG RoshenConfectioneryFactoryImpl:24 - RoshenConfectioneryFactoryImpl made confectionery
-2019-05-21 14:46:32 INFO  NewYearsGift:20 - NewYearsGift created successful
-2019-05-21 14:47:01 DEBUG RoshenConfectioneryFactoryImpl:24 - RoshenConfectioneryFactoryImpl made confectionery
-2019-05-21 14:47:01 INFO  NewYearsGift:20 - New gift created successful
-2019-05-21 14:47:28 WARN  NewYearsGift:25 - Confectionery factory didn't made a product. confectionery.size() = 0
-2019-05-21 14:55:29 DEBUG RoshenConfectioneryFactoryImpl:24 - RoshenConfectioneryFactoryImpl made confectionery.
-2019-05-21 14:55:29 INFO  NewYearsGift:20 - New gift created successful.
-2019-05-21 14:58:42 DEBUG RoshenConfectioneryFactoryImpl:24 - RoshenConfectioneryFactoryImpl made confectionery.
-2019-05-21 14:58:42 INFO  NewYearsGift:20 - New gift created successful.
-2019-05-21 15:11:54 DEBUG RoshenConfectioneryFactoryImpl:25 - RoshenConfectioneryFactoryImpl made confectionery.
-2019-05-21 15:11:54 INFO  NewYearsGift:20 - New gift created successful.
-2019-05-21 15:12:38 DEBUG RoshenConfectioneryFactoryImpl:25 - RoshenConfectioneryFactoryImpl made confectionery.
-2019-05-21 15:12:38 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-22 22:10:29 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-22 22:10:29 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-22 22:10:30 INFO  GiftSorter:31 - New years gift sorted successful
+2019-05-22 22:10:30 DEBUG Main:38 - Serialization started...
+2019-05-22 22:10:30 INFO  Main:42 - Objects serialised successful
+2019-05-22 22:12:12 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-22 22:12:12 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-22 22:12:12 INFO  GiftSorter:31 - New years gift sorted successful
+2019-05-22 22:12:12 DEBUG Main:38 - Serialization started...
+2019-05-22 22:12:12 INFO  Main:42 - Objects serialised successful.

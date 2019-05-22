@@ -1,10 +1,8 @@
 package com.bogdan.kolomiiets.tasks.Task_12_NewYearsGift;
 
 import org.apache.log4j.Logger;
-
 import java.util.HashMap;
 import java.util.Map;
-import java.util.function.Consumer;
 
 import static com.bogdan.kolomiiets.tasks.Task_12_NewYearsGift.ConfectioneryCatalog.*;
 

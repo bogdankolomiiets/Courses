@@ -1,11 +1,11 @@
 package com.bogdan.kolomiiets.tasks.Task_12_NewYearsGift;
 
 import org.apache.log4j.Logger;
-
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-public class NewYearsGift {
+public class NewYearsGift implements Serializable {
     private static Logger LOGGER = Logger.getLogger(NewYearsGift.class);
     private Map<Confectionery, Integer> newYearsGift = new HashMap<>();
     private double newYearsGiftWeight;
@@ -28,7 +28,8 @@ public class NewYearsGift {
             }
         } else {
             //put warning to log
-            LOGGER.warn("confectionery not added to NewYearsGift. Cause: countEachKindOfCandy = " + countEachKindOfConfectionery + " confectionery = " + confectionery);
+            LOGGER.warn("confectionery not added to NewYearsGift. Cause: countEachKindOfCandy = " +
+                                countEachKindOfConfectionery + " confectionery = " + confectionery);
             return false;
         }
     }
@@ -37,11 +38,51 @@ public class NewYearsGift {
         return newYearsGift;
     }
 
+    public void setNewYearsGift(Map<Confectionery, Integer> newYearsGift) {
+        this.newYearsGift = newYearsGift;
+    }
+
     private void calculateWeight(){
         newYearsGift.forEach((key, value) -> newYearsGiftWeight += key.getWeight() * value);
     }
 
-    public double getNewYearsGiftWeight() {
-        return newYearsGiftWeight;
+    @Override
+    public String toString() {
+        return newYearsGift + " Weight = " + newYearsGiftWeight + " grammes";
+    }
+
+    public String getConfectionery(String productName) {
+        String result = "New years gift don't contains candy with name " + productName;
+        Confectionery confectionery = newYearsGift.keySet()
+                .stream()
+                .filter(name -> name.getName().equalsIgnoreCase(productName))
+                .findAny().orElse(null);
+
+        if (confectionery == null) {
+            return "New years gift don't contains confectionery with name \"" + productName + "\"";
+        } else return confectionery.toString();
+    }
+
+    public String getConfectionery(double productWeight) {
+        Confectionery confectionery = newYearsGift.keySet()
+                .stream()
+                .filter(weight -> weight.getWeight() == productWeight)
+                .findAny().orElse(null);
+
+        if (confectionery == null) {
+            return "New years gift don't contains confectionery with weight " + productWeight;
+        } else return confectionery.toString();
+    }
+
+    public String getConfectionery(String productName, double productWeight){
+        Confectionery confectionery = newYearsGift.keySet()
+                .stream()
+                .filter(name -> name.getName().equalsIgnoreCase(productName))
+                .filter(weight -> weight.getWeight() == productWeight)
+                .findAny().orElse(null);
+
+        if (confectionery == null) {
+            return "New years gift don't contains confectionery with name \"" + productName + "\" and weight " + productWeight;
+        } else return confectionery.toString();
     }
 }

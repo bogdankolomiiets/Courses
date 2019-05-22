@@ -1,6 +1,8 @@
 package com.bogdan.kolomiiets.tasks.Task_12_NewYearsGift;
 
-public class Candy implements Candies {
+import java.io.Serializable;
+
+public class Candy implements Candies, Serializable {
     private final String candyName;
     private final double candyWeightGramme;
 
@@ -9,17 +11,18 @@ public class Candy implements Candies {
         this.candyWeightGramme = candy.getWeight();
     }
 
-    public String getCandyName() {
-        return candyName;
-    }
-
     @Override
-    public String toString() {
-        return candyName + ": " + candyWeightGramme;
+    public String getName() {
+        return candyName;
     }
 
     @Override
     public double getWeight() {
         return candyWeightGramme;
+    }
+
+    @Override
+    public String toString() {
+        return candyName + ": " + candyWeightGramme + " grams";
     }
 }

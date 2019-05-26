@@ -10,7 +10,7 @@ public class GiftSorter implements Serializable {
     public static final int BY_WEIGHT = 2;
 
 
-    public boolean sortGiftByName(NewYearsGift newYearsGift, int sortBy) {
+    public boolean sortGift(NewYearsGift newYearsGift, int sortBy) {
         if (newYearsGift != null) {
             try {
                 Map<Confectionery, Integer> tempMap;
@@ -28,10 +28,10 @@ public class GiftSorter implements Serializable {
                 }
                 newYearsGift.getNewYearsGift().forEach(tempMap::put);
                 newYearsGift.setNewYearsGift(tempMap);
-                LOGGER.info("New years gift sorted successful");
+                LOGGER.info("New years gift sorted successful.");
                 return true;
             } catch (IllegalArgumentException ex) {
-                LOGGER.warn("New years gift don't sorted. Please enter correct sort parameter. BY_NAME = 1, BY_WEIGHT = 2");
+                LOGGER.warn("New years gift don't sorted.");
                 return false;
             }
         } else {

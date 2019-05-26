@@ -1,10 +1,147 @@
-2019-05-22 22:10:29 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
-2019-05-22 22:10:29 INFO  NewYearsGift:20 - New gift created successful.
-2019-05-22 22:10:30 INFO  GiftSorter:31 - New years gift sorted successful
-2019-05-22 22:10:30 DEBUG Main:38 - Serialization started...
-2019-05-22 22:10:30 INFO  Main:42 - Objects serialised successful
-2019-05-22 22:12:12 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
-2019-05-22 22:12:12 INFO  NewYearsGift:20 - New gift created successful.
-2019-05-22 22:12:12 INFO  GiftSorter:31 - New years gift sorted successful
-2019-05-22 22:12:12 DEBUG Main:38 - Serialization started...
-2019-05-22 22:12:12 INFO  Main:42 - Objects serialised successful.
+2019-05-24 11:31:47 DEBUG Main:107 - Serialization started...
+2019-05-24 11:31:47 WARN  Main:117 - Objects not serialized.
+java.lang.NullPointerException
+	at com.bogdan.kolomiiets.tasks.Task_12_NewYearsGift.Main.serialiseObjects(Main.java:109)
+	at com.bogdan.kolomiiets.tasks.Task_12_NewYearsGift.Main.main(Main.java:17)
+2019-05-24 11:35:03 DEBUG Main:107 - Serialization started...
+2019-05-24 11:35:03 WARN  Main:117 - Objects not serialized.
+java.lang.NullPointerException
+	at com.bogdan.kolomiiets.tasks.Task_12_NewYearsGift.Main.serialiseObjects(Main.java:109)
+	at com.bogdan.kolomiiets.tasks.Task_12_NewYearsGift.Main.main(Main.java:17)
+2019-05-24 11:35:20 DEBUG Main:107 - Serialization started...
+2019-05-24 11:35:20 WARN  Main:117 - Objects not serialized.
+java.lang.NullPointerException
+	at com.bogdan.kolomiiets.tasks.Task_12_NewYearsGift.Main.serialiseObjects(Main.java:109)
+	at com.bogdan.kolomiiets.tasks.Task_12_NewYearsGift.Main.main(Main.java:17)
+2019-05-24 11:40:50 DEBUG Main:109 - Serialization started...
+2019-05-24 11:40:50 WARN  Main:119 - Objects not serialized.
+java.lang.NullPointerException
+	at com.bogdan.kolomiiets.tasks.Task_12_NewYearsGift.Main.serialiseObjects(Main.java:111)
+	at com.bogdan.kolomiiets.tasks.Task_12_NewYearsGift.Main.main(Main.java:17)
+2019-05-24 11:41:56 DEBUG Main:109 - Serialization started...
+2019-05-24 11:41:56 WARN  Main:119 - Objects not serialized.
+java.lang.NullPointerException
+	at com.bogdan.kolomiiets.tasks.Task_12_NewYearsGift.Main.serialiseObjects(Main.java:111)
+	at com.bogdan.kolomiiets.tasks.Task_12_NewYearsGift.Main.main(Main.java:17)
+2019-05-24 17:27:09 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 17:27:09 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-24 17:27:13 INFO  GiftSorter:31 - New years gift sorted successful.
+2019-05-24 17:36:26 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 17:36:26 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-24 17:36:28 INFO  GiftSorter:31 - New years gift sorted successful.
+2019-05-24 17:36:31 DEBUG Main:101 - Serialization started...
+2019-05-24 17:36:31 INFO  Main:105 - Objects serialised successful.
+2019-05-24 17:38:12 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 17:38:12 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-24 17:38:19 INFO  GiftSorter:31 - New years gift sorted successful.
+2019-05-24 17:38:21 DEBUG Main:104 - Serialization started...
+2019-05-24 17:38:21 INFO  Main:108 - Objects serialised successful.
+2019-05-24 17:40:12 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 17:40:12 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-24 17:40:13 INFO  GiftSorter:31 - New years gift sorted successful.
+2019-05-24 17:40:16 DEBUG Main:104 - Serialization started...
+2019-05-24 17:40:16 INFO  Main:108 - Objects serialised successful.
+2019-05-24 17:44:17 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 17:44:17 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-24 17:44:18 INFO  GiftSorter:31 - New years gift sorted successful.
+2019-05-24 17:44:19 DEBUG Main:102 - Serialization started...
+2019-05-24 17:44:19 INFO  Main:106 - Objects serialised successful.
+2019-05-24 18:08:13 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 18:08:13 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-24 18:18:41 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 18:18:48 WARN  NewYearsGift:31 - confectionery not added to NewYearsGift. Cause: countEachKindOfCandy = 0 confectionery = {KORIVKA: 7.0 grams=4500, ROSHETTO_MILK: 32.0 grams=3000, MILKY_SPLASH: 5.0 grams=1500, ROSHETTO_DARK: 32.0 grams=3000, MINKY_BINKY: 3.5 grams=3000, CRAZY_BEE: 4.0 grams=5000, SLYVKY_LENYVKY: 5.5 grams=2000}
+2019-05-24 18:18:48 INFO  GiftSorter:31 - New years gift sorted successful.
+2019-05-24 18:19:57 DEBUG Main:105 - Serialization started...
+2019-05-24 18:19:57 INFO  Main:109 - Objects serialised successful.
+2019-05-24 18:20:05 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 18:20:08 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-24 18:20:08 INFO  GiftSorter:31 - New years gift sorted successful.
+2019-05-24 18:26:28 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 18:27:13 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 18:27:21 WARN  NewYearsGift:31 - confectionery not added to NewYearsGift. Cause: countEachKindOfCandy = 0 confectionery = {KORIVKA: 7.0 grams=4500, ROSHETTO_MILK: 32.0 grams=3000, MILKY_SPLASH: 5.0 grams=1500, ROSHETTO_DARK: 32.0 grams=3000, MINKY_BINKY: 3.5 grams=3000, CRAZY_BEE: 4.0 grams=5000, SLYVKY_LENYVKY: 5.5 grams=2000}
+2019-05-24 18:27:21 INFO  GiftSorter:31 - New years gift sorted successful.
+2019-05-24 18:28:26 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 18:31:15 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 18:31:18 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-24 18:31:18 INFO  GiftSorter:31 - New years gift sorted successful.
+2019-05-24 18:31:47 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 18:31:49 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-24 18:32:26 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 18:32:28 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-24 18:32:38 INFO  GiftSorter:31 - New years gift sorted successful.
+2019-05-24 18:33:03 DEBUG Main:109 - Serialization started...
+2019-05-24 18:33:03 INFO  Main:113 - Objects serialised successful.
+2019-05-24 18:33:14 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 18:34:47 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 18:35:27 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 18:36:09 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 18:36:30 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-24 18:37:20 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 18:37:26 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-24 18:37:27 INFO  GiftSorter:31 - New years gift sorted successful.
+2019-05-24 18:37:29 DEBUG Main:110 - Serialization started...
+2019-05-24 18:37:29 INFO  Main:114 - Objects serialised successful.
+2019-05-24 18:38:03 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 18:38:12 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-24 18:38:24 INFO  GiftSorter:31 - New years gift sorted successful.
+2019-05-24 18:38:51 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 18:39:45 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 18:40:22 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 18:40:57 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-24 18:41:25 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 18:41:28 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-24 18:48:52 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 18:49:38 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 18:50:34 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 18:50:51 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-24 18:51:07 INFO  GiftSorter:31 - New years gift sorted successful.
+2019-05-24 18:54:08 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 18:54:11 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-24 18:54:20 INFO  GiftSorter:31 - New years gift sorted successful.
+2019-05-24 18:56:36 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 18:56:39 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-24 18:56:41 INFO  GiftSorter:31 - New years gift sorted successful.
+2019-05-24 20:03:36 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 20:03:39 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-24 20:03:41 INFO  GiftSorter:31 - New years gift sorted successful.
+2019-05-24 20:04:40 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 20:04:44 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-24 20:04:46 INFO  GiftSorter:31 - New years gift sorted successful.
+2019-05-24 20:04:47 DEBUG Main:123 - Serialization started...
+2019-05-24 20:04:47 INFO  Main:127 - Objects serialised successful.
+2019-05-24 20:05:15 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 20:05:19 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-24 20:07:05 INFO  GiftSorter:31 - New years gift sorted successful.
+2019-05-24 20:11:01 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 20:11:04 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-24 20:11:11 INFO  GiftSorter:31 - New years gift sorted successful.
+2019-05-24 20:11:13 DEBUG Main:125 - Serialization started...
+2019-05-24 20:11:13 INFO  Main:129 - Objects serialised successful.
+2019-05-24 20:26:55 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 20:26:57 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-24 20:26:59 INFO  GiftSorter:31 - New years gift sorted successful.
+2019-05-24 20:29:43 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 20:29:45 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-24 20:29:46 INFO  GiftSorter:31 - New years gift sorted successful.
+2019-05-24 20:29:47 DEBUG Main:96 - Serialization started...
+2019-05-24 20:29:47 INFO  Main:100 - Objects serialised successful.
+2019-05-24 20:30:52 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 20:30:54 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-24 20:30:55 INFO  GiftSorter:31 - New years gift sorted successful.
+2019-05-24 20:30:56 DEBUG Main:96 - Serialization started...
+2019-05-24 20:30:56 INFO  Main:100 - Objects serialised successful.
+2019-05-24 20:31:06 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 20:31:07 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-24 20:31:08 INFO  GiftSorter:31 - New years gift sorted successful.
+2019-05-24 20:31:09 DEBUG Main:96 - Serialization started...
+2019-05-24 20:31:09 INFO  Main:100 - Objects serialised successful.
+2019-05-24 22:19:40 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 22:19:41 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-24 22:19:43 INFO  GiftSorter:31 - New years gift sorted successful.
+2019-05-24 22:19:44 DEBUG Main:98 - Serialization started...
+2019-05-24 22:19:44 INFO  Main:102 - Objects serialised successful.
+2019-05-24 22:29:00 DEBUG RoshenConfectioneryFactoryImpl:23 - RoshenConfectioneryFactoryImpl made confectionery.
+2019-05-24 22:29:02 INFO  NewYearsGift:20 - New gift created successful.
+2019-05-24 22:29:03 INFO  GiftSorter:31 - New years gift sorted successful.
+2019-05-24 22:29:03 DEBUG Main:114 - Serialization started...
+2019-05-24 22:29:03 INFO  Main:118 - Objects serialised successful.

@@ -23,6 +23,6 @@ public class Candy implements Candies, Serializable {
 
     @Override
     public String toString() {
-        return candyName + ": " + candyWeightGramme + " grams";
+        return candyName + ": " + candyWeightGramme + " grams ";
     }
 }

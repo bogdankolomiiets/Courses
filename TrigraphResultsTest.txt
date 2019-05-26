@@ -1,0 +1,5 @@
+ARE = 2
+INT = 5
+ONE = 4
+THE = 1
+TOO = 1

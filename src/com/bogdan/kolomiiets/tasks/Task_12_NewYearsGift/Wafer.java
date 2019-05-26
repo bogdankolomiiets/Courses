@@ -21,6 +21,6 @@ public class Wafer implements Wafers {
 
     @Override
     public String toString() {
-        return waferName + ": " + waferWeightGramme + " grams";
+        return waferName + ": " + waferWeightGramme + " grams ";
     }
 }

@@ -1,0 +1,9 @@
+MILKY SPLASH, 5, Candies,
+MINKY BINKY, 3.5, Candies,
+SLYVKY LENYVKY, 5.5, Candies,
+KORIVKA, 7, Candies,
+JELLY, 2.5, Candies,
+CRAZY BEE, 4, Candies,
+WAFERS HAZELNUT, 72, Wafers,
+WAFERS CHOKO, 72, Wafers,
+ROSHETTO MILK, 32, Wafers;
